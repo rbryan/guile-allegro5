@@ -407,9 +407,7 @@
   allegro-bitmap?
   wrap-allegro-bitmap unwrap-allegro-bitmap
   (lambda (b port)
-    (format port "<allegro-bitmap ~d ~d ~x>"
-            (al-get-bitmap-width b)
-            (al-get-bitmap-height b)
+    (format port "<allegro-bitmap ~x>"
             (pointer-address (unwrap-allegro-bitmap b)))))
 
 (define-wrapped-pointer-type <allegro-locked-region>
